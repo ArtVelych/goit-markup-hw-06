@@ -98,8 +98,9 @@ section {
 .header-container {
     display: flex;
     justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
+    height: 56px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
 }
 
 .page-nav {
@@ -111,24 +112,34 @@ section {
     font-family: "Raleway", sans-serif;
     color: #4D5AE5;
     font-size: 18px;
+    font-style: normal;
     font-weight: 700;
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     padding-left: 0;
-    margin-right: 76px;
+    /* margin-right: 76px; */
 }
 
 .logo-name {
     color: #2E2F42;
 }
 
-.page-nav-list {
+.mobile-menu-button {
     display: flex;
+    justify-content: center;
     align-items: center;
+    background-color: transparent;
+    border: none;
 }
 
-.nav-list-link {
+.page-nav-list {
+    display: none;
+    /* display: flex;
+    align-items: center; */
+}
+
+/* .nav-list-link {
     font-size: 16px;
     color: #2e2f42;
     font-weight: 500;
@@ -140,9 +151,9 @@ section {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-.nav-items:not(:last-child) {
+/* .nav-items:not(:last-child) {
     margin-right: 40px;
 }
 
@@ -170,10 +181,13 @@ section {
     left: 0;
     border-radius: 2px;
     bottom: -1px;
+} */
+
+.address {
+    display: none;
 }
 
-
-.address-items {
+/* .address-items {
     font-style: normal;
 }
 
@@ -199,7 +213,7 @@ section {
 
 .address-items:not(:last-child) {
     margin-right: 40px;
-}
+} */
 
 /*=============================================*/
 
@@ -292,15 +306,6 @@ section {
 
 .features-border-icon {
     display: none;
-    /* height: 112px;
-    background-color: rgba(244, 244, 253, 1);
-    border: 1px solid rgba(142, 143, 153, 1);
-    border-radius: 4px;
-    margin-bottom: 8px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .features-titles {
@@ -569,7 +574,6 @@ section {
     justify-content: center;
     align-items: center;
     gap: 16px;
-    /* margin-left: 80px; */
 }
 
 .footer-form-title {
@@ -579,7 +583,6 @@ section {
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin: 0 auto;
-    /* margin-bottom: 16px; */
 }
 
 .footer-form {
@@ -591,14 +594,12 @@ section {
 }
 
 .footer-email {
-    /* width: 264px; */
     width: 288px;
     height: 40px;
     padding: 8px 16px;
     background-color: transparent;
-    border: 1px solid #FFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
-    opacity: 0.3;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     color: #FFF;
     font-size: 12px;
@@ -609,13 +610,12 @@ section {
 }
 
 .footer-email::placeholder {
-    color: #FFF;
+    color: rgba(255, 255, 255, 0.6);;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 2;
     letter-spacing: 0.04em;
-    opacity: 0.6;
 }
 
 .footer-form-button {
@@ -646,6 +646,24 @@ section {
 .footer-form-button:hover,
 .footer-form-button:focus {
     background-color: #404BBF;
+}
+
+/*=============================================*/
+
+/*=============== Modal Window Menu ================*/
+
+.backdrop-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.40);
+    /* opacity: 0;
+    visibility: hidden;
+    pointer-events: none; */
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 320px;
+    height: 640px;
 }
 
 /*=============================================*/
@@ -1144,6 +1162,7 @@ section {
         flex-direction: row;
         justify-content: flex-start;
         align-items: baseline;
+        gap: 80px;
     }
 
     .footer-elements {
@@ -1154,4 +1173,13 @@ section {
     .page-footer-text {
         max-width: 264px;
     }
+
+    .footer-email {
+        border: 1px solid rgba(255, 255, 255, 1);
+    }
+
+    .footer-email::placeholder {
+        color: rgba(255, 255, 255, 1);
+    }
+
 }
