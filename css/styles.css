@@ -73,7 +73,7 @@ section {
     text-transform: capitalize;
 }
 
-/* .portfolio-cover-text, */
+.portfolio-cover-text,
 .team-text,
 .portfolio-text,
 .page-footer-text {
@@ -98,9 +98,7 @@ section {
 .header-container {
     display: flex;
     justify-content: space-between;
-    height: 56px;
-    /* padding-left: 15px;
-    padding-right: 15px; */
+    padding: 17px 0 17px 0;
 }
 
 .page-nav {
@@ -118,7 +116,6 @@ section {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     padding-left: 0;
-    /* margin-right: 76px; */
 }
 
 .logo-name {
@@ -135,85 +132,11 @@ section {
 
 .page-nav-list {
     display: none;
-    /* display: flex;
-    align-items: center; */
 }
-
-/* .nav-list-link {
-    font-size: 16px;
-    color: #2e2f42;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    padding: 24px 0 24px;
-    display: block;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
-
-/* .nav-items:not(:last-child) {
-    margin-right: 40px;
-}
-
-.page-nav-list .nav-list-link:hover,
-.page-nav-list .nav-list-link:focus {
-    color: #404bbf;
-}
-
-.nav-items {
-    position: relative;
-}
-
-.studio {
-    position: relative;
-    color: #404bbf;
-}
-
-.studio::after {
-    content: '';
-    width: 48px;
-    height: 4px;
-    background: rgba(64, 75, 191, 1);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 2px;
-    bottom: -1px;
-} */
 
 .address {
     display: none;
 }
-
-/* .address-items {
-    font-style: normal;
-}
-
-.address-links-item {
-    color: #434455;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    padding: 24px 0 24px;
-    display: block;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address-links .address-links-item:hover,
-.address-links .address-links-item:focus {
-    color: #404bbf;
-}
-
-.address-links {
-    display: flex;
-    align-items: center;
-}
-
-.address-items:not(:last-child) {
-    margin-right: 40px;
-} */
 
 /*=============================================*/
 
@@ -722,7 +645,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
     gap: 40px;
 }
 
@@ -761,7 +683,6 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
     gap: 24px;
 }
 
@@ -831,15 +752,15 @@ section {
 }
 
 .modal {
-    width: 408px;
-    min-height: 584px;
+    width: 288px;
+    min-height: 623px;
     background-color: #FCFCFC;
     border-radius: 4px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -890,7 +811,7 @@ section {
 
 .modal-field {
     margin-bottom: 8px;
-    max-width: 360px;
+    max-width: 256px;
 }
 
 .modal-label {
@@ -919,7 +840,7 @@ section {
     letter-spacing: 0.03em;
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    padding-left: 38px;
+    padding-left: 34px;
     padding-right: 16px;
     background-color: transparent;
     outline: transparent;
@@ -974,12 +895,13 @@ section {
     color:rgba(46, 47, 66, 0.40);    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: 0.03em;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 
 .privacy-policy {
-    max-width: 360px;
+    width: 100%;
+    max-height: 31px;
     margin-bottom: 24px;
 }
 
@@ -1004,12 +926,18 @@ section {
     line-height: 1.17;
     letter-spacing: 0.04em;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .policy-text .modal-policy-link {
     text-decoration: underline;
     color: #4D5AE5;
-    line-height: 1;
+    display: block;
+    margin-left: 24px;
+
 }
 
 .policy-text-tick {
@@ -1019,11 +947,11 @@ section {
     border-radius: 2px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
-    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     fill: transparent;
     margin-right: 8px;
+    flex-shrink: 0;
 }
 
 .user-privacy:checked+.policy-text>.policy-text-tick {
@@ -1035,9 +963,9 @@ section {
 .modal-form-button {
     display: block;
     margin: 0 auto;
-    min-width: 165px;
-    height: 40px;
-    padding: 8px 24px;
+    min-width: 169px;
+    height: 56px;
+    padding: 16px 32px;
     border-radius: 4px;
     color: #FFF;
     font-size: 16px;
@@ -1069,7 +997,113 @@ section {
         border: 2px solid rgb(0, 255, 34);
     }
 
-/*=============================================*/
+/*====================================*/
+
+/*========= MENU SECTION =============*/
+    
+    .backdrop-menu {
+        display: none;
+    }
+
+    .backdrop-menu.is-open {
+        display: none;
+    }
+
+    .header-container {
+        padding: 0;
+    }
+
+    .mobile-menu-button {
+        display: none;
+    }
+
+    .page-nav {
+        gap: 120px;
+        /* gap: 76px; */
+    }
+
+    .page-nav-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+    
+    .nav-list-link {
+        font-size: 16px;
+        color: #2e2f42;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        padding: 24px 0 24px;
+        display: block;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .page-nav-list .nav-list-link:hover,
+    .page-nav-list .nav-list-link:focus {
+        color: #404bbf;
+    }
+    
+    .nav-items {
+        position: relative;
+    }
+    
+    .studio {
+        position: relative;
+        color: #404bbf;
+    }
+    
+    .studio::after {
+        content: '';
+        width: 48px;
+        height: 4px;
+        background: rgba(64, 75, 191, 1);
+        position: absolute;
+        left: 0;
+        border-radius: 2px;
+        bottom: -1px;
+    }
+    
+    .address {
+        display: contents;
+    }
+    
+    .address-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+
+    
+    .address-links-item {
+        color: #434455;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .address-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .address-links .address-links-item:hover,
+    .address-links .address-links-item:focus {
+        color: #404bbf;
+    }
+
+/*====================================*/
 
 /*================= MAIN BODY ===============*/
 
@@ -1151,7 +1185,6 @@ section {
 
 /*================= FOOTER =================*/
 
-
     .footer-container {
         min-width: 456px;
         padding-left: 108px;
@@ -1200,7 +1233,33 @@ section {
         width: 264px;
     }
 
+/*=============== Modal Window ====================*/
+
+    .modal {
+        width: 408px;
+        min-height: 584px;
+        padding: 72px 24px 24px 24px;
+    }
+
+    .modal-field {
+        max-width: 360px;
+    }
+
+    .modal-input {
+        padding-left: 38px;
+    }
+
+    .policy-text .modal-policy-link {
+        margin-left: 3px;
+    }
+
 }
+
+/*=========================================*/
+/*=========================================*/
+/*=========================================*/
+/*=========================================*/
+/*=========================================*/
 
 @media screen and (min-width: 1158px) {
     
@@ -1216,6 +1275,27 @@ section {
     }
 
     /*=============================================*/
+
+    /*=============== HEADER ===================*/
+
+    .header-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .address-links {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .address-links-item {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.32px;
+        letter-spacing: 0.02em;
+    }
+
+    /*=================================*/
     
     /*================= MAIN BODY ===============*/
     
@@ -1323,5 +1403,9 @@ section {
     .footer-email::placeholder {
         color: rgba(255, 255, 255, 1);
     }
+
+/*=================--====================*/
+
+/*=============== Modal Window =============*/
 
 }
