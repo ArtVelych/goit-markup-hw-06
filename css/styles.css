@@ -1245,10 +1245,6 @@ section {
         max-width: 360px;
     }
 
-    .modal-input {
-        padding-left: 38px;
-    }
-
     .policy-text .modal-policy-link {
         margin-left: 3px;
     }
@@ -1407,5 +1403,9 @@ section {
 /*=================--====================*/
 
 /*=============== Modal Window =============*/
+
+    .modal-input {
+        padding-left: 38px;
+    }
 
 }
